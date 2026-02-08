@@ -1,0 +1,2 @@
+recursive-include gridpath_solver/templates *
+recursive-include gridpath_solver/static *

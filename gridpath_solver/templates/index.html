@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GridPath Solver</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css')}}">
+    <script src="{{url_for('static',filename='js/home.js')}}"></script>
+</head>
+<body>
+
+    <header>Welcome to GridPath Solver Finder</header>
+
+    <div class="main">
+
+        <div id="first-info">
+            <div><div>Enter Number of Rows </div> <input type="number" name="nrows" id="nrows"></div>
+            <div><div>Enter Number of Columns  </div><input type="number" name="ncols" id="ncols"></div>
+            <div><button class="button" id="basic-info">Submit</button></div>
+        </div>
+
+        <br><br>
+        <h3 id="desc" class="none">Choose the Options and Click on tiles </h3>
+        <div id="second-part" class="none">
+            <div id="grid" class="none">
+    
+            </div>
+            <div class="controls none">
+                <div>
+                   <button id="btn-start">Select Starting Point</button>
+                    <button id="btn-walls" class="sel-btn">Select Walls</button>
+                    <button id="btn-end">Select Ending Point</button>
+                    
+                </div>
+                <div>
+                    <button id="btn-submit">SUBMIT</button>
+                </div>
+            </div>
+        </div>
+        <div id="reload" class="none" onclick="location.reload()">Back</div>
+        <div id="total-ways" class="none">Total Ways : </div>
+        <div id="results" class="none">
+        </div>
+
+
+
+    </div>
+
+    <Footer>created by G Daniel Vineel</Footer>
+
+    <div id="loading-overlay" class="none">
+        <div class="loader"></div>
+        <p>Finding optimal path...</p>
+    </div>
+
+</body>
+
+</html>
