@@ -179,15 +179,22 @@
             e.preventDefault()
             nrows=Number(document.getElementById("nrows").value)
             ncols=Number(document.getElementById("ncols").value)
-            document.getElementById("first-info").classList.toggle("none")
-            document.getElementsByClassName("controls")[0].classList.toggle("none")
-            document.getElementById("reload").classList.toggle("none")
-            document.getElementById("total-ways").classList.toggle("none")
-            document.getElementById("results").classList.toggle("none")
-            document.getElementById("second-part").classList.toggle("none")
-            document.getElementById("desc").classList.toggle("none")
+            if(nrows == 0){
+                alert("Please Enter the Number of Rows")
+            }else if(ncols== 0){
+                alert("Please Enter the Number of Columns")
+            }else{
 
-            getGrid()
+                document.getElementById("first-info").classList.toggle("none")
+                document.getElementsByClassName("controls")[0].classList.toggle("none")
+                document.getElementById("reload").classList.toggle("none")
+                document.getElementById("total-ways").classList.toggle("none")
+                document.getElementById("results").classList.toggle("none")
+                document.getElementById("second-part").classList.toggle("none")
+                document.getElementById("desc").classList.toggle("none")
+    
+                getGrid()
+            }
         })
 
 
