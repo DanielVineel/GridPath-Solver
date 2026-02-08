@@ -5,7 +5,7 @@
     const red="red"
     const blue="blue"
     const green="green"
-    const noColor="unset"
+    const noColor=""
 
     let buttons=[
         document.getElementById("btn-start"),
