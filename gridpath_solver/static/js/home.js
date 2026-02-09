@@ -259,6 +259,7 @@
                             }
                         }else if(start_point){
                             if(startDiv!=""){
+                                grid.getElementsByClassName(`${r}${c}`)[0].style.backgroundColor=noColor
                                 startDiv.style.backgroundColor=noColor;
                                 r,c=getPoints(startDiv);
                                 mat[r][c]=0;
@@ -269,6 +270,7 @@
                             startDiv=div;
                         }else if(end_point){
                             if(endDiv!=""){
+                                grid.getElementsByClassName(`${r}${c}`)[0].style.backgroundColor=noColor
                                 endDiv.style.backgroundColor=noColor;
                                 r,c=getPoints(endDiv);
                                 mat[r][c]=0;
