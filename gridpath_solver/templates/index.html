@@ -7,11 +7,19 @@
 {% endblock %}
 
 {% block content %}
-    <h1 style="margin-top: 20px;">Welcome to GridPath Solver Finder</h1>
+    <h1 style="margin-top: 40px; color: #b4befe;">Welcome to GridPath Solver Finder</h1>
     <div id="first-info">
-        <div><div>Enter Number of Rows </div> <input type="number" name="nrows" id="nrows"></div>
-        <div><div>Enter Number of Columns  </div><input type="number" name="ncols" id="ncols"></div>
-        <div><button class="button" id="basic-info">Submit</button></div>
+        <div>
+            <div>Enter Number of Rows</div>
+            <input type="number" name="nrows" id="nrows" placeholder="e.g. 5">
+        </div>
+        <div>
+            <div>Enter Number of Columns</div>
+            <input type="number" name="ncols" id="ncols" placeholder="e.g. 5">
+        </div>
+        <div>
+            <button class="button" id="basic-info">Set Grid Size</button>
+        </div>
     </div>
 
     <br><br>

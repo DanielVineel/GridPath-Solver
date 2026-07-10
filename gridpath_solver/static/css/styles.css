@@ -1,6 +1,10 @@
 #grid{
     display: grid;
-
+    gap: 1px;
+    background-color: #313244; /* Grid border color */
+    border: 1px solid #313244;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
 .none{
@@ -40,12 +44,25 @@
 
 
 button{
-    border-radius: 20px;
-    padding:10px;
+    border-radius: 8px;
+    padding: 10px 15px;
+    background-color: #313244;
+    color: #cdd6f4;
+    border: 1px solid #45475a;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+button:hover {
+    background-color: #45475a;
 }
 .sel-btn{
-    background-color: black;
-    color:white;
+    background-color: #89b4fa;
+    color: #11111b;
+    border-color: #89b4fa;
+    font-weight: bold;
+}
+.sel-btn:hover {
+    background-color: #b4befe;
 }
 
 
@@ -56,10 +73,11 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #0d2a45; /* Dark teal/blue matching the logo */
-    color: whitesmoke;
-    font-size: larger;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    background-color: #181825;
+    color: #f5e0dc;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    border-bottom: 1px solid #313244;
 }
 header .logo-container {
     margin-left: 20px;
@@ -78,44 +96,47 @@ header nav {
     margin-right: 20px;
 }
 header nav a {
-    color: whitesmoke;
+    color: #cdd6f4;
     text-decoration: none;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 header nav a:hover {
-    text-decoration: underline;
-    color: #4da6ff;
+    color: #89b4fa;
 }
 footer{
     width: 100%;
-    background-color: #0d2a45;
-    color: whitesmoke;
+    background-color: #181825;
+    color: #a6adc8;
     position: fixed;
     bottom: 0px;
     left: 0px;
     height: 60px;
-    font-size: 16px;
+    font-size: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    box-shadow: 0 -2px 4px rgba(0,0,0,0.5);
+    box-shadow: 0 -4px 6px rgba(0,0,0,0.2);
+    border-top: 1px solid #313244;
+    z-index: 100;
 }
 footer a {
-    color: whitesmoke;
+    color: #89b4fa;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
 }
 footer a:hover {
-    text-decoration: underline;
+    color: #b4befe;
 }
 body{
     min-height:100vh;
-    background-color: #121212;
-    color: #e0e0e0;
+    background-color: #0f111a;
+    color: #cdd6f4;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .main{
     display: flex;
@@ -129,27 +150,60 @@ body{
     width: 100%;
 } */
 
-#first-info>div{
-    max-width:400px;
-    margin:10px;
-    padding:10px;
+#first-info {
     display: flex;
-    border-bottom: 1px solid gray;
-    border-radius: 15px;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: #181825;
+    border: 1px solid #313244;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+#first-info>div{
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
 #first-info>div>input{
     margin-left: 20px;
-    border: 1px inset black;
-    padding: 2px 6px;
-    border-radius: 10px;
+    border: 1px solid #45475a;
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    padding: 8px 12px;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
+
+#first-info>div>input:focus{
+    border-color: #89b4fa;
+    box-shadow: 0 0 0 2px rgba(137, 180, 250, 0.3);
+}
+
 #first-info>div>button{
-    width  :100%;
-    background-color: #0a4f70;
-    color:white;
+    width: 100%;
+    background: linear-gradient(135deg, #89b4fa, #cba6f7);
+    color: #11111b;
     border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.1s;
+}
+
+#first-info>div>button:hover{
+    opacity: 0.9;
+}
+
+#first-info>div>button:active{
+    transform: scale(0.98);
 }
 #second-part{
     display: flex;
@@ -160,7 +214,11 @@ body{
     gap:20px;
 }
 #grid>div{
-    border: 1px solid black;
+    background-color: #1e1e2e;
+    transition: background-color 0.2s;
+}
+#grid>div:hover {
+    filter: brightness(1.2);
 }
 #second-part>.controls>div{
     display: flex;
@@ -193,27 +251,44 @@ body{
 
 }
 #results{
-
     width: 96%;
     margin-left: 2%;
-    border:1px solid black;
+    border: 1px solid #313244;
+    background-color: #11111b;
     display: flex;
     flex-wrap: wrap;
-    gap:15px;
-    padding:10px;
-    border-radius: 10px;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 12px;
     justify-content: space-evenly;
-
+}
+#results > div {
+    gap: 1px;
+    background-color: #313244;
+    border: 1px solid #313244;
 }
 #results>div>div{
-    border:1px solid black;
+    background-color: #1e1e2e;
 }
 
 #btn-submit{
-    background-color: #0a4f70;
-    color:white;
+    background: linear-gradient(135deg, #a6e3a1, #94e2d5);
+    color: #11111b;
     width: 100%;
     font-size: large;
-    font-weight: 400;
+    font-weight: bold;
     border: none;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#btn-submit:hover{
+    opacity: 0.9;
+}
+
+#btn-submit:active{
+    transform: scale(0.98);
 }
