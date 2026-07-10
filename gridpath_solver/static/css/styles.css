@@ -54,24 +54,44 @@ header{
     width: 100%;
     text-align: center;
     height:50px;
-    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
     background-color: purple;
     color:whitesmoke;
     font-size: larger;
     /* font-weight: 900; */
 }
+header a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 16px;
+}
+header a:hover {
+    text-decoration: underline;
+}
 footer{
-    width:100%;
+    width: 100%;
     background-color: purple;
-    color:whitesmoke;
+    color: whitesmoke;
     position: fixed;
-    bottom:0px;
-    left:0px;
-    text-align: center;
-    height:60px;
-    font-size: larger;
-
-    align-content: center;
+    bottom: 0px;
+    left: 0px;
+    height: 60px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+footer a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+}
+footer a:hover {
+    text-decoration: underline;
 }
 body{
     min-height:100vh;
