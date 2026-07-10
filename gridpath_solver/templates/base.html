@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GridPath Solver - An interactive tool to find optimal paths avoiding obstacles using BFS. Created by G Daniel Vineel.">
+    <meta name="keywords" content="GridPath, Pathfinding, BFS, Algorithm, Obstacle Avoidance, Daniel Vineel">
+    <meta name="author" content="G Daniel Vineel">
     <title>{% block title %}GridPath Solver{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css')}}">
     {% block head %}{% endblock %}
@@ -10,9 +13,16 @@
 <body>
 
     <header>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+        <div class="logo-container">
+            <a href="/">
+                <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Daniel Vineel Logo" class="logo">
+            </a>
+        </div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </nav>
     </header>
 
     <div class="main">

@@ -12,4 +12,5 @@ dist/
 *.spec
 
 # OS
-.DS_Storeapp_output.log
+.DS_Store
+app_output.log
